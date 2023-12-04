@@ -20070,7 +20070,7 @@
                     "y": 10
                 },
                 {
-                    "name": "",
+                    "name": "chest",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "d4206af4-4d12-4cfd-a4a8-faa11d4aff34",
@@ -21303,7 +21303,46 @@
                     "y": 12
                 }
             ],
-            "triggers": [],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "3a0562f5-0cd4-49e2-b190-e3d3b292498e",
+                    "x": 23,
+                    "y": 4,
+                    "symbol": "trigger_17",
+                    "width": 1,
+                    "height": 13,
+                    "script": [
+                        {
+                            "command": "EVENT_MUSIC_STOP",
+                            "args": {},
+                            "id": "e307c5ce-bf87-48b7-b0a6-faf73751abf6"
+                        },
+                        {
+                            "command": "EVENT_SOUND_PLAY_EFFECT",
+                            "args": {
+                                "type": "ca718340-6862-49ef-b052-0a086eda78f4",
+                                "priority": "medium",
+                                "pitch": 4,
+                                "frequency": 200,
+                                "duration": 0.5,
+                                "wait": true,
+                                "effect": 1,
+                                "__comment": true
+                            },
+                            "id": "50d3b447-516b-41a5-9514-8c9f63480510"
+                        },
+                        {
+                            "command": "EVENT_MUSIC_PLAY",
+                            "args": {
+                                "musicId": "82fafd76-688f-43cc-be93-447395ff6545"
+                            },
+                            "id": "b96d1db1-658a-4e61-8f9a-d6da92fcaaeb"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
             "script": [
                 {
                     "command": "EVENT_SET_VALUE",
@@ -21315,6 +21354,13 @@
                         }
                     },
                     "id": "efc4d7d1-c4b3-4d78-9e00-6b20cd84fec3"
+                },
+                {
+                    "command": "EVENT_MUSIC_PLAY",
+                    "args": {
+                        "musicId": "05ef4530-7c73-4949-9a26-c61ff0df5f16"
+                    },
+                    "id": "9da8466a-b5b8-4a69-84ef-01c92d4fa90e"
                 }
             ],
             "playerHit1Script": [],
@@ -61410,6 +61456,14 @@
             "type": "uge"
         },
         {
+            "id": "7a33259e-301a-4e61-a495-e6e9c475733c",
+            "name": "newsong",
+            "symbol": "song_newsong",
+            "filename": "newsong.mod",
+            "settings": {},
+            "type": "mod"
+        },
+        {
             "id": "82fafd76-688f-43cc-be93-447395ff6545",
             "name": "song_template",
             "symbol": "song_song_template",
@@ -61424,9 +61478,26 @@
             "filename": "template.mod",
             "settings": {},
             "type": "mod"
+        },
+        {
+            "id": "7d12c352-cb98-4e7a-98af-7b698dbef19a",
+            "name": "wheel_of_fortune",
+            "symbol": "song_wheel_of_fortune",
+            "filename": "wheel_of_fortune.mod",
+            "settings": {},
+            "type": "mod"
         }
     ],
     "sounds": [
+        {
+            "id": "ecd24e69-585e-4fe6-b746-31bbee7f4bde",
+            "name": "GBFX.sav",
+            "symbol": "sound_gbfx_sav",
+            "filename": "GBFX.sav",
+            "type": "fxhammer",
+            "inode": "26480080",
+            "_v": 1701655317341
+        },
         {
             "id": "ca718340-6862-49ef-b052-0a086eda78f4",
             "name": "Tronimal_Sound_Effects.sav",
@@ -61812,17 +61883,17 @@
         }
     ],
     "settings": {
-        "startSceneId": "a8a53a9c-8695-45ed-9d00-1b1669dcb010",
-        "startX": 13,
+        "startSceneId": "5a496e4c-bb61-4485-a014-73f626245107",
+        "startX": 25,
         "startY": 10,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
         "startDirection": "left",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 127,
-        "zoom": 51.5,
+        "worldScrollX": 10,
+        "worldScrollY": 123,
+        "zoom": 157.5,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
@@ -61850,8 +61921,8 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            229,
-            391,
+            293,
+            327,
             347
         ],
         "showNavigator": true,
